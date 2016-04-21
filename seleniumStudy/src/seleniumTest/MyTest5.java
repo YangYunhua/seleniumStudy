@@ -8,7 +8,7 @@ public class MyTest5 {
 	
 	@Before
 	public void setup() throws Exception{
-		//driver.get("http://www.baidu.com");
+		driver.get("http://www.baidu.com");
 		
 	}
 	
