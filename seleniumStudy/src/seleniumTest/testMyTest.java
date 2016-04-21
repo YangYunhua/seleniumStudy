@@ -16,10 +16,12 @@ public class testMyTest {
 		test3.setup();
 		test3.testcanvas();
 		test3.tearDown();*/
-		MyTest4 test4 = new MyTest4();
+		/*MyTest4 test4 = new MyTest4();
 		test4.setup();
 		test4.testDrag();
-		test4.tearDown();
+		test4.tearDown();*/
+		MyTest5 test5 = new MyTest5();
+		test5.setup();
 	}
 
 }
