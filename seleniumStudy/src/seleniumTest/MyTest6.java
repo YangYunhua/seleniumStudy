@@ -7,6 +7,7 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 /*
+ * 
  * 使用JQuery选择器 ：even选出右侧导航栏偶数（第一位索引是0）超链接
  * Download、Blog以及Browser Support
  * 《Selenium菜谱》1.11 p42
