@@ -8,6 +8,10 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class MyTest5 {
+	/*
+	 * 验证百度首页导航链接数量
+	 * 《Selenium菜谱》1.4 p29
+	 */
 
 	WebDriver driver = new  ChromeDriver();
 	
