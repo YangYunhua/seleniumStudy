@@ -7,7 +7,7 @@ import org.openqa.selenium.*;
 /*
  * 《基于 Selenium 2 的自动化测试》例5-3
  */
-public class MyTest4 {
+public class MyTest4<driver> {
 
 	WebDriver driver = new ChromeDriver();
 	@Before

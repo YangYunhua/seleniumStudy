@@ -1,22 +1,15 @@
 package seleniumTest;
-
-import java.util.*;
-
-import junit.framework.*;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.junit.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.*;
 
 import com.google.common.base.Predicate;
 
 public class Mytest1 {
 	private static final Predicate<WebDriver> ExpectedConditions = null;
-	private static WebDriver driver;
-	private static String Driver_BASE_URL="D:\\selenium\\chromedriver.exe";
+	private static ChromeDriver driver;
+	private static String Driver_BASE_URL="D:\\yangyh\\seleniumStudy.git\\trunk\\seleniumStudy\\chromedriver.exe";
 	
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", Driver_BASE_URL);

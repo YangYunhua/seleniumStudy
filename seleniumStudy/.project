@@ -14,16 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>selenium-2.45.0</name>
-			<type>2</type>
-			<location>D:/selenium/selenium-java-2.45.0/selenium-2.45.0</location>
-		</link>
-		<link>
-			<name>selenium-support-2.29.1-sources.jar</name>
-			<type>2</type>
-			<location>D:/selenium/selenium-support-2.29.1-sources.jar</location>
-		</link>
-	</linkedResources>
 </projectDescription>
