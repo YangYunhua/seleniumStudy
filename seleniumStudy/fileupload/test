@@ -1,0 +1,58 @@
+import java.util.concurrent.TimeUnit;
+import java.util.Date;
+import java.io.File;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.*;
+import static org.openqa.selenium.OutputType.*;
+
+public class  {
+    public static void main(String[] args) throws Exception {
+        FirefoxDriver wd;
+        wd = new FirefoxDriver();
+        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        wd.get("http://182.61.30.149:8090/wd_erp/login.jsp");
+        wd.findElement(By.id("username")).click();
+        wd.findElement(By.id("username")).clear();
+        wd.findElement(By.id("username")).sendKeys("090");
+        wd.findElement(By.id("password")).click();
+        wd.findElement(By.id("password")).clear();
+        wd.findElement(By.id("password")).sendKeys("111111");
+        wd.findElement(By.id("login_sub")).click();
+        wd.findElement(By.linkText("日常管理")).click();
+        wd.findElement(By.linkText("请假/销假")).click();
+        wd.findElement(By.linkText("请假")).click();
+        if (!wd.findElement(By.xpath("//select[@id='leaveLEAVE_TYPE']//option[2]")).isSelected()) {
+            wd.findElement(By.xpath("//select[@id='leaveLEAVE_TYPE']//option[2]")).click();
+        }
+        wd.findElement(By.id("PROJECT_NAME")).click();
+        wd.findElement(By.xpath("//div[@id='tree_org']/li/ul/li[1]/div/span[2]")).click();
+        wd.findElement(By.xpath("//div[@id='tree_org']//span[.='智隆信息（高教-技术-ERP系统)']")).click();
+        wd.findElement(By.xpath("//div[@class='ui-dialog-buttonset']/button[1]")).click();
+        wd.findElement(By.id("LEAVE_CONTENT")).click();
+        wd.findElement(By.id("LEAVE_CONTENT")).clear();
+        wd.findElement(By.id("LEAVE_CONTENT")).sendKeys("test");
+        wd.findElement(By.id("LEAVE_CONTENT")).click();
+        wd.findElement(By.id("LEAVE_CONTENT")).clear();
+        wd.findElement(By.id("LEAVE_CONTENT")).sendKeys("testtesttesttesttesttesttesttest");
+        wd.findElement(By.id("LEAVE_DURATION")).click();
+        wd.findElement(By.id("LEAVE_DURATION")).clear();
+        wd.findElement(By.id("LEAVE_DURATION")).sendKeys("1");
+        wd.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
+        wd.findElement(By.cssSelector("span.dwb")).click();
+        wd.findElement(By.id("saveBut")).click();
+        wd.findElement(By.xpath("//div[10]/div[3]/div/button[1]")).click();
+        wd.findElement(By.xpath("//div[11]/div[3]/div/button")).click();
+        wd.quit();
+    }
+    
+    public static boolean isAlertPresent(FirefoxDriver wd) {
+        try {
+            wd.switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException e) {
+            return false;
+        }
+    }
+}
