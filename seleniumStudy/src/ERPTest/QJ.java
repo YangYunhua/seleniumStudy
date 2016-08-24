@@ -42,8 +42,10 @@ public class QJ {
 		driver.findElement(By.id("LEAVE_DURATION")).click();
 		driver.findElement(By.id("LEAVE_DURATION")).sendKeys("0");
 		
-		Thread.sleep(3000);
+		Thread.sleep(10000);
+		
 		driver.findElement(By.cssSelector("div.dwwo")).click();
+		System.out.println("111");
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[2]/div/div[2]/div[2]")).click();
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[3]/div/table/tbody/tr/td[1]/div/div[2]/div[2]")).click();
