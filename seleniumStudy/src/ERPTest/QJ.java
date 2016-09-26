@@ -3,6 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.*;
@@ -40,11 +41,36 @@ public class QJ {
 		driver.findElement(By.id("LEAVE_CONTENT")).click();
 		driver.findElement(By.id("LEAVE_CONTENT")).sendKeys("testtesttesttesttesttesttesttest");
 		driver.findElement(By.id("LEAVE_DURATION")).click();
-		driver.findElement(By.id("LEAVE_DURATION")).sendKeys("0");
+		driver.findElement(By.id("LEAVE_DURATION")).sendKeys("1");
+		
+		System.out.println("111");
 		
 		Thread.sleep(10000);
 		
+		driver.findElement(By.id("LEAVE_STARTDATE")).click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('LEAVE_STARTDATE').readOnly=false;");
 		driver.findElement(By.cssSelector("div.dwwo")).click();
+		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[2]/div/div[2]/div[2]")).click();
+		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
+		driver.findElement(By.xpath("//div[@class='dwwr']/div[3]/div/table/tbody/tr/td[1]/div/div[2]/div[2]")).click();
+        driver.findElement(By.cssSelector("span.dwb")).click();
+		System.out.println("test2");
+		Thread.sleep(3000);
+		
+		
+		driver.findElement(By.id("LEAVE_ENDDATE")).click();
+		js.executeScript("document.getElementById('LEAVE_ENDDATE').readOnly=false;");
+		//driver.findElement(By.cssSelector("div.dwwo")).click();
+		driver.findElement(By.id("LEAVE_ENDDATE")).sendKeys("2016-08-25 14:00");
+		/*driver.findElement(By.xpath("/html/body/div[12]/div/div[2]/div[2]/div[2]/div/table/tbody/tr/td[1]/div/div[2]/div[1]/div/div[1]/div")).click();
+		driver.findElement(By.xpath("/html/body/div[12]/div/div[2]/div[2]/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[1]/div[1]/div[8]/div")).click();
+        new Actions(driver).doubleClick(driver.findElement(By.xpath("/html/body/div[12]/div/div[2]/div[2]/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[1]/div[2]/div[6]/div"))).build().perform();
+       // driver.findElement(By.xpath("//div[@class='dwwr']/div[3]/div/table/tbody/tr/td[1]/div/div[2]/div[2]")).click();
+		driver.findElement(By.cssSelector("span.dwb")).click();*/
+		System.out.println("test2");
+		Thread.sleep(3000);
+		/*driver.findElement(By.cssSelector("div.dwwo")).click();
 		System.out.println("111");
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[2]/div/div[2]/div[2]")).click();
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
@@ -53,11 +79,10 @@ public class QJ {
 		driver.findElement(By.cssSelector("span.dwb")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
-		driver.findElement(By.xpath("//div[@class='dwwr']/div[3]/div/table/tbody/tr/td[1]/div/div[2]/div[2]")).click();
-        
-		driver.findElement(By.cssSelector("span.dwb")).click();
-		driver.findElement(By.cssSelector("span.ace-file-container")).click();
-		driver.findElement(By.id("FJ")).click();
+		driver.findElement(By.xpath("//div[@class='dwwr']/div[3]/div/table/tbody/tr/td[1]/div/div[2]/div[2]")).click();*/
+	
+		/*driver.findElement(By.cssSelector("span.ace-file-container")).click();
+		driver.findElement(By.id("FJ")).click();*/
 		driver.findElement(By.id("saveBut")).click();
 		driver.findElement(By.xpath("//div[10]/div[3]/div/button[1]")).click();
 		driver.findElement(By.xpath("//div[11]/div[3]/div/button")).click();

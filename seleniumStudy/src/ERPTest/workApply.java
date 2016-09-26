@@ -14,12 +14,11 @@ public class workApply {
 	private static final Predicate<WebDriver> ExpectedConditions = null;
 	private static ChromeDriver driver;
 	private static String Driver_BASE_URL="D:\\yangyh\\seleniumStudy.git\\trunk\\seleniumStudy\\chromedriver.exe";
-	
-	
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", Driver_BASE_URL);
 		driver = new ChromeDriver();
 		ScreenShot ss = new ScreenShot(driver);
+		
 		/*
 		 * login
 		 */
@@ -39,32 +38,16 @@ public class workApply {
 		driver.findElement(By.id("sqTASK_TITLE")).sendKeys("test");
 		driver.findElement(By.id("sqTASK_DETAILS")).click();
 		driver.findElement(By.id("sqTASK_DETAILS")).sendKeys("test");
-		/*
-		 *
-		 * remove readonly
-		 *
-		JavascriptExecutor removereadonly = (JavascriptExecutor)driver;  
-		removereadonly.executeScript("var setDate=document.getElementById(\"sqSTART_TIME\"); setDate.removeAttribute('readonly');") ;
-		driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).clear();
-		
-		driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).sendKeys("2016-08-24");*/
-		
+	
 		driver.findElement(By.id("sqSTART_TIME")).click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("document.getElementById('sqSTART_TIME').readOnly=false;");
-		System.out.println("test");
 		driver.findElement(By.cssSelector("div.dwwo")).click();
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[2]/div/div[2]/div[2]")).click();
 		driver.findElement(By.xpath("//div[@class='dwwr']/div[2]/div/table/tbody/tr/td[3]/div/div[2]/div[2]")).click();
 		driver.findElement(By.cssSelector("span.dwb")).click();
 		System.out.println("test2");
-		
-		Thread.sleep(8000);
-		
-		/*driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).sendKeys("2016-08-24");
-		System.out.println("test3");
-		Thread.sleep(8000);*/
-		
+		Thread.sleep(3000);
 		
 		driver.findElement(By.id("sqEND_TIME")).click();
 		js.executeScript("document.getElementById('sqEND_TIME').readOnly=false;");
@@ -75,17 +58,13 @@ public class workApply {
 		driver.findElement(By.cssSelector("span.dwb")).click();
 		System.out.println("test2");
 		
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 		
-		/*driver.findElement(By.xpath("//input[@id='sqEND_TIME']")).sendKeys("2016-08-24");
-		System.out.println("test3");*/
-		
-	
 		driver.findElement(By.id("sqMAIN_FEED")).click();
 		driver.findElement(By.id("sqMAIN_FEED")).clear();
 		driver.findElement(By.id("sqMAIN_FEED")).sendKeys("@”‡∑Â@Õı¿⁄ˆŒ");
 		System.out.println("test3");
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 		
 		js.executeScript("arguments[0].click();",driver.findElement(By.id("sqCC_LIST")));
 
@@ -97,28 +76,18 @@ public class workApply {
 		
 		Thread.sleep(3000);
 		
-		String path = System.getProperty("user.dir") + "fileupload";
-		File file = new File(path);
-		
-		if(file.exists()){
-			driver.findElement(By.id("FJ")).sendKeys(file.getPath());
-		}
-		js.executeScript("arguments[0].click();",driver.findElement(By.cssSelector("span.ace-file-container")));
-		
-		//driver.findElement(By.cssSelector("span.ace-file-container")).click();
-		System.out.println("test5");
-		js.executeScript("arguments[0].click();",driver.findElement(By.id("FJ")));
 		//driver.findElement(By.id("FJ")).click();
-		System.out.println("test5");
-		Thread.sleep(3000);
+		js.executeScript("arguments[0].click();",driver.findElement(By.id("FJ")));
+		//js.executeScript("arguments[0].sendKeys('D:\\yangyh\\seleniumStudy.git\\trunk\\seleniumStudy\\fileupload\\test.java');",driver.findElement(By.id("FJ")));
+	
+		Thread.sleep(6000);
 		driver.findElement(By.id("saveBut")).click();
 		driver.findElement(By.xpath("//div[@class='ui-dialog-buttonset']/button")).click();
 		driver.findElement(By.xpath("//div[@class='col-xs-3']/button")).click();
 		driver.findElement(By.xpath("//div[@class='ui-dialog-buttonset']/button[1]")).click();
 		driver.findElement(By.xpath("//div[@class='ui-dialog-buttonset']/button")).click();
         
-        
-		Thread.sleep(100);
+        Thread.sleep(100);
 		driver.close();
 	}
 

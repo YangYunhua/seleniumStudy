@@ -1,0 +1,26 @@
+/*
+		 *
+		 * remove readonly
+		 *
+		JavascriptExecutor removereadonly = (JavascriptExecutor)driver;  
+		removereadonly.executeScript("var setDate=document.getElementById(\"sqSTART_TIME\"); setDate.removeAttribute('readonly');") ;
+		driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).clear();
+		
+		driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).sendKeys("2016-08-24");*/
+		
+		
+		
+		/*driver.findElement(By.xpath("//input[@id='sqSTART_TIME']")).sendKeys("2016-08-24");
+		System.out.println("test3");
+		Thread.sleep(8000);*/
+		
+			/*String path = System.getProperty("user.dir") + "fileupload";
+		File file = new File(path);
+		
+		if(file.exists()){
+			driver.findElement(By.id("FJ")).sendKeys(file.getPath());
+		}*/
+		//js.executeScript("arguments[0].click();",driver.findElement(By.cssSelector("span.ace-file-container")));
+		
+		//driver.findElement(By.cssSelector("span.ace-file-container")).click();
+		System.out.println("test5");

@@ -43,5 +43,6 @@
 	<classpathentry kind="lib" path="D:/yangyh/seleniumStudy.git/trunk/seleniumStudy/selenium-2.44.0/selenium-java-2.44.0.jar"/>
 	<classpathentry kind="lib" path="D:/yangyh/seleniumStudy.git/trunk/seleniumStudy/selenium-2.44.0/selenium-java-2.44.0-srcs.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_31"/>
+	<classpathentry kind="lib" path="D:/yangyh/MonteScreenRecorder.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
