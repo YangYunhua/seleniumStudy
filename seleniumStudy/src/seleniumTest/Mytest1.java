@@ -18,11 +18,11 @@ public class Mytest1 {
 		driver.manage().window().maximize();
 		Thread.sleep(10);
 		driver.findElement(By.className("k2")).click();
-*/
+        */
 		driver.get("http://www.cnblogs.com");
 		driver.findElement(By.linkText("µÇÂ¼")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 300);
-		
+		 
 		//wait.until((ExpectedConditions).visiblityOfElenemtLocated(By.id("tbUsername")));
 		driver.findElement(By.id("tbUserName")).sendKeys("selenium");
 		Thread.sleep(100);
